@@ -20,7 +20,7 @@ function App() {
       } else if (priorities.length > active ) {
         setActive(active + 1)
       } 
-    }, 400)
+    }, 600)
    
 
 
