@@ -14,11 +14,14 @@ function App() {
   const completePriority = (priority) => {
     const adjustedArray = priorities.map(p => p.order === active ? {...p, isComplete: !p.isComplete} : p) 
     setPriorities(adjustedArray)
-    if (priorities.length === active) {
-      setActive(null)
-    } else if (priorities.length > active ) {
-      setActive(active + 1)
-    } 
+    setTimeout(() => {
+      if (priorities.length === active) {
+        setActive(null)
+      } else if (priorities.length > active ) {
+        setActive(active + 1)
+      } 
+    }, 400)
+   
 
 
   }
