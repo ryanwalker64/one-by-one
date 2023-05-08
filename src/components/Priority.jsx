@@ -15,7 +15,14 @@ function Priority({priority, closeView, completePriority}) {
           <p className="text-sm text-[color:var(--orange)] mb-5 font-bold">0/3</p>
           <p className="font-black leading-tight text-5xl text-[color:#333] mb-auto">{priority.text}</p>
         </div>
-        <button onClick={completePriority} className={`${priority.isComplete ? `bg-[color:var(--orange)] text-white` : ``} py-3 rounded-xl text-[color:var(--orange)] border border-[color:var(--orange)]`}>Complete</button>
+        <button onClick={completePriority} className={`${priority.isComplete ? `bg-[color:var(--orange)] text-white` : ``} py-3 rounded-xl text-[color:var(--orange)] border border-[color:var(--orange)]`}>
+           {priority.isComplete 
+                ?   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={5} stroke="white" className="mx-auto w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                :   <span>Complete</span>     
+            }
+        </button>
       </div>
     )
  

@@ -15,7 +15,7 @@ function NewPriority({addPriority}) {
 
     return (
         <form onSubmit={handleNewPriority} className={`bg-white flex  rounded-xl p-4 items-center mb-4 border border-[color:var(--orange)]`}>
-                    <input onChange={e => setInput(e.target.value)} value={input} className="text-gray-700 text-sm focus:outline-none" placeholder="Add a priority..."/>
+                    <input onChange={e => setInput(e.target.value)} value={input} className="w-full text-gray-700 text-sm focus:outline-none" placeholder="Add a priority..."/>
         </form>
     )
 }

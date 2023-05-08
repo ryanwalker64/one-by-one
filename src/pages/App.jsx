@@ -14,6 +14,13 @@ function App() {
   const completePriority = (priority) => {
     const adjustedArray = priorities.map(p => p.order === active ? {...p, isComplete: !p.isComplete} : p) 
     setPriorities(adjustedArray)
+    if (priorities.length === active) {
+      setActive(null)
+    } else if (priorities.length > active ) {
+      setActive(active + 1)
+    } 
+
+
   }
 
   return (
@@ -25,7 +32,7 @@ function App() {
       <div className="px-8 mt-8">
         <Priorities_List setActive={setActive} priorities={priorities} addPriority={addPriority}/>
 
-        {priorities.length < 3 
+        {priorities.filter(p => !p.isComplete).length < 3 
                 ? <NewPriority addPriority={addPriority}/>
                 : <MaxPriorities />}
       </div>
