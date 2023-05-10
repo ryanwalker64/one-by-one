@@ -33,20 +33,20 @@ function App() {
   
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen">
      {!focusMode && 
       <div className="grow flex flex-col">
-        <header className="px-8 pt-8 items-center">
+        <header className="px-8 pt-8 items-center flex">
           <h1 className="mr-auto text-xl font-bold">One by One</h1>
+          {priorities.filter(p => !p.isComplete).length > 0 && <button onClick={startFocusMode} className="ml-auto text-white px-5 p-2 bg-[color:var(--orange)] rounded-xl">Start</button>}
         </header>
 
-        <div className="px-8 mt-8 flex flex-col grow">
+        <div className="px-8">
           <Priorities_List  priorities={priorities} setFocusMode={setFocusMode} addPriority={addPriority}/>
 
           {priorities.filter(p => !p.isComplete).length < 3 
                   ? <NewPriority addPriority={addPriority}/>
                   : <MaxPriorities />}
-          {priorities.filter(p => !p.isComplete).length > 0 && <button onClick={startFocusMode} className="mt-auto mb-8 text-white w-full p-3 bg-[color:var(--orange)] rounded-xl">Start</button>}
         </div>
       </div>}
 

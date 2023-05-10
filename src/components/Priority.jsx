@@ -8,7 +8,7 @@ function Priority({priority, closeView, completePriority, prioritiesData}) {
   }
 
     return (
-      <div className={`${priority.isComplete ? `bg-[color:var(--orange)]` : `bg-white`} px-8 py-10 flex flex-col h-screen w-full text-center`}>
+      <div className={`${priority.isComplete ? `bg-[color:var(--orange)]` : `bg-white`} px-8 py-14 flex flex-col h-screen w-full text-center`}>
         <div onClick={closeView} className="mx-auto">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={0.5} stroke={priority.isComplete ? `white` : `black`} className="w-10 h-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
