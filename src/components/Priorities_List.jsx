@@ -6,7 +6,7 @@ function Priorities_List({setActive, setFocusMode, priorities}) {
     
   
     return (
-        <div className="mt-8">
+        <div className="">
             {priorities.map((p, index) => <Priority_Detail setFocusMode={() => setFocusMode(p.order) }setActive={() => setActive(index + 1)} key={index} isComplete={p.isComplete} order={index + 1} text={p.text}/>)}
         
         </div>

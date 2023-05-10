@@ -14,8 +14,8 @@ function NewPriority({addPriority}) {
     }
 
     return (
-        <form onSubmit={handleNewPriority} className={`bg-white flex  rounded-xl p-4 items-center mb-4 border border-[color:var(--orange)]`}>
-                    <input onChange={e => setInput(e.target.value)} value={input} className="w-full text-gray-700 text-sm focus:outline-none" placeholder="Add a priority..."/>
+        <form onSubmit={handleNewPriority} className={`bg-[color:#FDDBB3] flex  rounded-md mb-4 py-2 px-3  items-center `}>
+                    <input onChange={e => setInput(e.target.value)} value={input} className="w-full placeholder:text-[color:var(--orange)] bg-[color:#FDDBB3] text-black text-sm focus:outline-none" placeholder="Add a priority..."/>
         </form>
     )
 }
