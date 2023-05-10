@@ -13,14 +13,14 @@ import App from './pages/App';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/app",
     element: <App />,
     errorElement: <ErrorPage />,
   },
+  // {
+  //   path: "/app",
+  //   element: <App />,
+  //   errorElement: <ErrorPage />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
