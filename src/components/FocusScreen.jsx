@@ -16,10 +16,10 @@ function FocusScreen({task, setScreen}) {
         initial={{ opacity: 0, }}
         animate={{ opacity: 1, }}
         transition={{ duration: 0.5 }}
-        className="mt-3 grow flex flex-col">
+        className="">
             {/* <p className="text-sm font-thin mb-2">priority {task.order}</p> */}
             <h1 className="font-[100] text-5xl mb-5 opacity-50 mt-auto">if you only do one thing today.</h1>
-            <h1 className="font-[700] text-5xl mb-auto">{task.text}</h1>
+            <h1 className="font-[700] text-5xl mb-10">{task.text}</h1>
             <p onClick="" className="flex gap-1 items-center font-thin text-xl">complete
               <span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
