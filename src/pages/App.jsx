@@ -37,9 +37,9 @@ function App() {
   // bg-[color:#FFF5EA]
 
   return (
-    <div className="min-h-screen bg-black text-white px-8 pt-8 pb-14 flex flex-col">
+    <div className="min-h-screen bg-black text-white px-8 pt-8 pb-14 flex flex-col justify-center">
 
-      {priorities && priorities.map(p => {
+      {screen == 4 && priorities.map(p => {
         return (
           <motion.div 
           initial={{ opacity: 0, }}
@@ -52,10 +52,11 @@ function App() {
         )
       })}
 
-      <div className="mt-auto">
+      <div className="">
         {/* {screen > 0 &&  <span onClick={() => setScreen(prev => prev - 1)} className="text-sm font-thin">go back</span>} */}
         {screen === 0 && 
           <LayoutScreen 
+            setScreen={() => setScreen(1)}
             heading="three tasks, one by one.">
             <p onClick={() => setScreen(1)} className="flex gap-1 font-thin text-xl">swipe to start
               <span>

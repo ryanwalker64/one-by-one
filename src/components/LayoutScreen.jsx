@@ -4,7 +4,18 @@ import { motion } from "framer-motion"
 function LayoutScreen({children, heading, setScreen}) {
   return (
     <motion.div 
-    initial={{ opacity: 0, }}
+    drag="x"
+    whileDrag={{opacity: 0.5}}
+    dragMomentum={false}
+    dragConstraints={{left: 0, right: 0}}
+    dragElastic={0.8}
+    onDragEnd={(e, info) => {
+      if(info.offset.x < 25) {
+        console.log('PLACEHOLDER')
+        setScreen()
+      }
+    }}
+   initial={{ opacity: 0, }}
     animate={{ opacity: 1, }}
     transition={{ duration: 0.5 }}
     className="mt-3">
