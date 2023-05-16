@@ -8,5 +8,6 @@
   font-family: 'Manrope', sans-serif;
   /* background-color: #F3F3F7; */
   --orange: #EA8C1F;
+  text-transform: lowercase;
 }
 
